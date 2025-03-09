@@ -239,13 +239,13 @@ class KochRobotConfig(ManipulatorRobotConfig):
 
     cameras: dict[str, CameraConfig] = field(
         default_factory=lambda: {
-            "top": OpenCVCameraConfig(
+            "laptop": OpenCVCameraConfig(
                 camera_index=0,
                 fps=30,
                 width=640,
                 height=480,
             ),
-            "hand": OpenCVCameraConfig(
+            "phone": OpenCVCameraConfig(
                 camera_index=1,
                 fps=30,
                 width=640,
@@ -331,13 +331,13 @@ class KochBimanualRobotConfig(ManipulatorRobotConfig):
 
     cameras: dict[str, CameraConfig] = field(
         default_factory=lambda: {
-            "top": OpenCVCameraConfig(
+            "laptop": OpenCVCameraConfig(
                 camera_index=0,
                 fps=30,
                 width=640,
                 height=480,
             ),
-            "hand": OpenCVCameraConfig(
+            "phone": OpenCVCameraConfig(
                 camera_index=1,
                 fps=30,
                 width=640,
@@ -399,13 +399,13 @@ class MossRobotConfig(ManipulatorRobotConfig):
 
     cameras: dict[str, CameraConfig] = field(
         default_factory=lambda: {
-            "top": OpenCVCameraConfig(
+            "laptop": OpenCVCameraConfig(
                 camera_index=0,
                 fps=30,
                 width=640,
                 height=480,
             ),
-            "hand": OpenCVCameraConfig(
+            "phone": OpenCVCameraConfig(
                 camera_index=1,
                 fps=30,
                 width=640,
@@ -468,8 +468,8 @@ class So100RobotConfig(ManipulatorRobotConfig):
                 width=640,
                 height=480,
             ),
-            "front": OpenCVCameraConfig(
-                camera_index=1,
+            "hand": OpenCVCameraConfig(
+                camera_index=2,
                 fps=30,
                 width=640,
                 height=480,
