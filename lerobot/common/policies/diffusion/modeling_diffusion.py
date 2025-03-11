@@ -778,7 +778,7 @@ class TransformerForDiffusion(nn.Module):
         # conditioning over input observation steps (n_obs_steps) + time (1)
         t_cond = 1 + config.n_obs_steps
 
-        input_dim = config.input_shapes["observation.state"][0]
+        input_dim = config.action_feature.shape[0]
         # input embedding stem
         self.input_emb = nn.Linear(input_dim, config.diffusion_step_embed_dim)
         self.pos_emb = nn.Parameter(torch.zeros(1, config.horizon, config.diffusion_step_embed_dim))
